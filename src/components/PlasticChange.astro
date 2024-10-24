@@ -2,4 +2,26 @@
 
 ---
 
-<h1>PlasticChange</h1>
+<div class="image-comparison w-screen h-screen overflow-hidden">
+    <div class="images-container relative flex">
+        <img class="before-image absolute top-0 w-1/2 h-full object-cover object-left" src="/before.png" alt="" />
+        <img class="after-image h-full object-cover object-left" src="/after.png" alt="" />
+
+        <div class="slider-line absolute h-full w-px bg-white left-1/2 transform -translate-x-1/2"></div>
+
+        <input type="range" class="slider absolute inset-0 opacity-0 cursor-pointer" min="0" max="100" />
+    </div>
+</div>
+
+<script>
+    const slider = document.querySelector(".image-comparison .slider");
+    const beforeImage = document.querySelector(".image-comparison .before-image");
+    const sliderLine = document.querySelector(".image-comparison .slider-line");
+
+    slider.addEventListener("input", (e) => {
+        let sliderValue = e.target.value + "%";
+
+        beforeImage.style.width = sliderValue;
+        sliderLine.style.left = sliderValue;
+    });
+</script>
