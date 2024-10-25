@@ -2,26 +2,31 @@
 
 ---
 
-<div class="image-comparison w-screen h-screen overflow-hidden">
+<div class="image-comparison w-screen h-screen overflow-hidden" id="image-comparison">
     <div class="images-container relative flex">
-        <img class="before-image absolute top-0 w-1/2 h-full object-cover object-left" src="/before.png" alt="" />
+        <img class="before-image absolute top-0 h-full object-cover object-left" src="/before.png" alt="" id="before-image" />
         <img class="after-image h-full object-cover object-left" src="/after.png" alt="" />
 
-        <div class="slider-line absolute h-full w-px bg-white left-1/2 transform -translate-x-1/2"></div>
+        <div class="slider-line absolute h-full w-2 bg-white left-1/2 transform -translate-x-1/2" id="slider-line"></div>
 
-        <input type="range" class="slider absolute inset-0 opacity-0 cursor-pointer" min="0" max="100" />
+        <input type="range" class="slider absolute inset-0 opacity-0 cursor-pointer" min="0" max="100" id="slider" />
     </div>
 </div>
 
 <script>
-    const slider = document.querySelector(".image-comparison .slider");
-    const beforeImage = document.querySelector(".image-comparison .before-image");
-    const sliderLine = document.querySelector(".image-comparison .slider-line");
+    const imageComparison = document.getElementById("image-comparison");
+    const beforeImage = document.getElementById("before-image");
+    const sliderLine = document.getElementById("slider-line");
+    const slider = document.getElementById("slider");
 
-    slider.addEventListener("input", (e) => {
-        let sliderValue = e.target.value + "%";
+    imageComparison.addEventListener("mousemove", (event) => {
+        const rect = imageComparison.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const width = rect.width;
+        const percentage = (x / width) * 100;
 
-        beforeImage.style.width = sliderValue;
-        sliderLine.style.left = sliderValue;
+        sliderLine.style.left = `${percentage}%`;
+        slider.value = percentage;
+        beforeImage.style.width = `${percentage}%`;
     });
 </script>
