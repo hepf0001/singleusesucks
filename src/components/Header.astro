@@ -10,10 +10,11 @@ import Link from "../components/Link.astro";
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row gap-4">
-        <li class=""><a href="#">Link 1</a></li>
-        <li class=""><a href="#">Link 2</a></li>
-        <li class=""><a href="#">Link 3</a></li>
-        <li class=""><a href="#">Link 4</a></li>
+        <Link><a href="Plastikforurening">Om Plastikforurening</a></Link>
+        <Link><a href="problemet">Plastikproblemet</a></Link>
+        <Link><a href="#">Hvad Kan Du Gøre?</a></Link>
+        <Link><a href="#">Vores Indsats</a></Link>
+        <Link><a href="#">Shop</a></Link>
       </ul>
     </nav>
     <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
