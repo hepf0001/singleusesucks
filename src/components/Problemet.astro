@@ -1,5 +1,92 @@
 ---
-
+import Slider from "./Slider.astro";
+import Button from "./Button.astro";
 ---
 
-<h1>Problemet</h1>
+<section>
+  <!-- Section 1 -->
+  <div id="stock" class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/skies.png');">
+    <div class="top-element z-50 text-left max-w-5xl mx-auto pt-8">
+      <h1 class="text-[#FAFAFA] text-5xl md:text-8xl">Problemet med plastikforurening</h1>
+      <div class="data-columns flex flex-col max-w-5xl mx-auto py-20 z-10">
+        <div id="column1" class="p-4 flex flex-col justify-center items-start py-20 z-50 relative">
+          <img src="/column1.svg" alt="column1" class="w-3/4 md:w-2/3" />
+          <h3 class="text-right pt-4 text-[#FAFAFA]">Af plastikken flyder i overfladen</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="flex justify-center items-center h-screen w-full bg-cover bg-center sticky top-0" style="background-image: url('/underwater.jpg');">
+    <div class="data-columns flex flex-col max-w-5xl mx-auto py-20 z-10">
+      <div id="column2" class="p-4 flex flex-col justify-center items-end py-20 z-50 relative">
+        <img src="/column2.svg" alt="column2" class="w-2/3 md:w-3/4" />
+        <h3 class="text-right pt-4 text-[#FAFAFA]">Ligger længere nede i vandsøjlen</h3>
+      </div>
+    </div>
+    <img
+      src="/bottle2.webp"
+      alt="trash"
+      class="opacity-50 absolute bottom-[48%] left-[2%] w-96 animate-[float_5s_linear_infinite] z-50 hidden md:block"
+    />
+    <img
+      src="/fork.webp"
+      alt="trash"
+      class="opacity-50 absolute bottom-[15%] right-[50%] w-72 animate-[float_6s_linear_infinite] z-30 hidden md:block"
+    />
+    <img
+      src="/glove.png"
+      alt="trash"
+      class="opacity-50 absolute bottom-[2%] right-[2%] w-96 animate-[float_5s_linear_infinite] z-50 hidden md:block"
+    />
+    <img
+      src="/cup.png"
+      alt="trash"
+      class="opacity-50 absolute bottom-[60%] left-[50%] w-80 animate-[float_6s_linear_infinite] z-30 hidden md:block"
+    />
+  </div>
+</section>
+<div>
+  <Slider />
+</div>
+
+<style>
+  /* Misc. styles */
+  h1,
+  h3 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  section {
+    background-image: url("/skies.webp");
+    background-size: 500vh;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+</style>
+
+<script>
+  import { inView } from "motion";
+
+  /* Parallax Animation */
+  window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+
+    document.querySelectorAll(".wave-layer").forEach((wave, index) => {
+      const speed = (index + 1) * 1.2;
+      wave.style.backgroundPositionY = `${scrolled * speed}px`;
+    });
+  });
+
+  /* inView Animations */
+  const elementmedanimation1 = document.querySelector("#column1");
+  inView(elementmedanimation1, () => {
+    elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation2 = document.querySelector("#column2");
+  inView(elementmedanimation2, () => {
+    elementmedanimation2.classList.add("animate__animated", "animate__fadeInRight");
+  });
+</script>
