@@ -2,33 +2,68 @@
 import Button from "../components/Button.astro";
 ---
 
-<section class="bg-teal-700">
-  <section class="max-w-6xl mx-auto p-6">
-    <img src="/logo.svg" alt="Plastic Change logo" />
-    <div class="flex">
-      <a href="https://www.facebook.com/plasticchange/"><img src="/f.svg" alt="" /></a>
-      <a href="https://x.com/plasticchange"><img src="/x.svg" alt="" /></a>
-      <a href="https://www.linkedin.com/company/plastic-change"><img src="/in.svg" alt="" /></a>
-      <a href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g"><img src="/yt.svg" alt="" /></a>
-      <a href="https://www.instagram.com/plasticchange"><img src="/ig.svg" alt="" /></a>
+<section class="bg-[#007C79]">
+  <!--------------------------- Mobil --------------------------->
+  <section class="max-w-6xl mx-auto p-6 md:hidden block">
+    <img class="pb-6" src="/logo.svg" alt="Plastic Change logo" />
+    <div class="flex pb-12">
+      <a class="pr-2" href="https://www.facebook.com/plasticchange/"><img src="/f.svg" alt="" /></a>
+      <a class="px-2" href="https://x.com/plasticchange"><img src="/x.svg" alt="" /></a>
+      <a class="px-2" href="https://www.linkedin.com/company/plastic-change"><img src="/in.svg" alt="" /></a>
+      <a class="px-2" href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g"><img src="/yt.svg" alt="" /></a>
+      <a class="pl-2" href="https://www.instagram.com/plasticchange"><img src="/ig.svg" alt="" /></a>
     </div>
-    <div>
-      <h2 class="pb-6 text-white">Nyhedsbrev</h2>
-      <p class="pb-6 text-white">Bliv en del af kampen mod plastikforurening. Tilmeld dig vores nyhedsbrev og få opdateringer om vores initiativer og hvordan du kan bidrage.</p>
+    <div class="pb-12">
+      <h2 class="pb-6 text-[#FAFAFA]">Nyhedsbrev</h2>
+      <p class="pb-6 text-[#FAFAFA]">Bliv en del af kampen mod plastikforurening. Tilmeld dig vores nyhedsbrev og få opdateringer om vores initiativer og hvordan du kan bidrage.</p>
       <form>
-        <input type="email" class="rounded-full my-2 px-6 p-2 bg-teal-700 border-2 border-teal-900 placeholder-white" placeholder="E-mail adresse" />
+        <input type="email" class="rounded-full my-2 px-6 p-2 bg-[#007C79] border-2 border-[#0A5755] placeholder-[#FAFAFA]" placeholder="E-mail adresse" />
         <Button class="my-2" variant="primary" size="small">Knap</Button>
       </form>
     </div>
     <div>
-      <p class="text-white">Mail. info@plasticchange.org</p>
-      <p class="pb-6 text-white">Tlf. +45 42 66 72 46</p>
+      <p class="text-[#FAFAFA]">Mail. info@plasticchange.org</p>
+      <p class="pb-6 text-[#FAFAFA]">Tlf. +45 42 66 72 46</p>
 
-      <p class="text-white">Telefontid. Mandag – Fredag,</p>
-      <p class="pb-6 text-white">10:00 – 15:00</p>
+      <p class="text-[#FAFAFA]">Telefontid. Mandag – Fredag,</p>
+      <p class="pb-6 text-[#FAFAFA]">10:00 – 15:00</p>
 
-      <p class="text-xs text-white">Website af Hui jin, Sara & Helena</p>
-      <p class="text-xs text-white">© 2024 Plastic Change</p>
+      <p class="text-xs text-[#FAFAFA]">Website af Hui jin, Sara & Helena</p>
+      <p class="text-xs text-[#FAFAFA]">© 2024 Plastic Change</p>
+    </div>
+  </section>
+
+  <!--------------------------- Desktop --------------------------->
+  <section class="max-w-6xl mx-auto p-6 hidden md:block">
+    <div class="grid grid-cols-3">
+      <div>
+        <img class="pb-6" src="/logo.svg" alt="Plastic Change logo" />
+        <div>
+          <p class="text-[#FAFAFA]">Mail. info@plasticchange.org</p>
+          <p class="pb-6 text-[#FAFAFA]">Tlf. +45 42 66 72 46</p>
+
+          <p class="text-[#FAFAFA]">Telefontid. Mandag – Fredag,</p>
+          <p class="pb-6 text-[#FAFAFA]">10:00 – 15:00</p>
+
+          <p class="text-xs text-[#FAFAFA]">Website af Hui jin, Sara & Helena</p>
+          <p class="text-xs text-[#FAFAFA]">© 2024 Plastic Change</p>
+        </div>
+      </div>
+      <div class="pb-12">
+        <h2 class="pb-6 text-[#FAFAFA]">Nyhedsbrev</h2>
+        <p class="pb-6 text-[#FAFAFA]">Bliv en del af kampen mod plastikforurening. Tilmeld dig vores nyhedsbrev og få opdateringer om vores initiativer og hvordan du kan bidrage.</p>
+        <form>
+          <input type="email" class="rounded-full my-2 px-6 p-2 bg-[#007C79] border-2 border-[#0A5755] placeholder-[#FAFAFA]" placeholder="E-mail adresse" />
+          <Button class="my-2" variant="primary" size="small">Knap</Button>
+        </form>
+      </div>
+      <div class="flex pb-12">
+        <a class="pr-2" href="https://www.facebook.com/plasticchange/"><img src="/f.svg" alt="" /></a>
+        <a class="px-2" href="https://x.com/plasticchange"><img src="/x.svg" alt="" /></a>
+        <a class="px-2" href="https://www.linkedin.com/company/plastic-change"><img src="/in.svg" alt="" /></a>
+        <a class="px-2" href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g"><img src="/yt.svg" alt="" /></a>
+        <a class="pl-2" href="https://www.instagram.com/plasticchange"><img src="/ig.svg" alt="" /></a>
+      </div>
     </div>
   </section>
 </section>
