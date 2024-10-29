@@ -1,17 +1,17 @@
 ---
-
+import ButtonSlider from "./ButtonSlider.astro";
 ---
 
 <div id="slider-header">
   <h2 class="md:text-left text-center text-[#007C79] max-w-5xl md:max-w-6xl mx-auto md:pt-20 pt-12">De tre hovedpunkter i problemet</h2>
 </div>
-<section class="relative flex items-center justify-center md:h-screen h-[120vh]">
+<section class="relative flex items-center justify-center md:h-screen h-[100vh]">
   <div id="slider-section" class="relative w-3/4 lg:w-1/2 lg:h-[80%] h-[90%] mx-auto overflow-hidden">
     <div class="overflow-hidden md:shadow-md shadow-lg md:rounded-lg rounded-2xl bg-[#FAFAFA]">
       <div id="slider" class="flex transition-transform duration-500 ease-in-out">
         <!-- Slide 1 -->
         <div class="min-w-full">
-          <img src="/turtle2.webp" alt="Slide 1" class="w-full h-96 object-cover" />
+          <img src="/turtle2.webp" alt="Slide 1" class="w-full md:h-96 h-40 object-cover" />
           <div class="p-4 text-[#1C1E23]">
             <h3 class="text-2xl font-bold">Havdyr er særligt udsatte</h3>
             <p class="">
@@ -28,7 +28,7 @@
         <!-- Slide 2 -->
         <div class="min-w-full">
           <iframe
-            class="w-full h-96"
+            class="w-full md:h-96 h-40"
             src="https://www.youtube.com/embed/3c5BzEOrNi8"
             title="YouTube video player"
             frameborder="0"
@@ -49,7 +49,7 @@
         <!-- Slide 3 -->
         <div class="min-w-full">
           <iframe
-            class="w-full h-96"
+            class="w-full md:h-96 h-40"
             src="https://www.youtube.com/embed/T6mUfvJUdwI"
             title="YouTube video player"
             frameborder="0"
@@ -72,21 +72,15 @@
     <!-- Navigation Buttons -->
     <button
       id="prev"
-      class="flex justify-center items-center gap-2 absolute left-5 top-[35%] md:top-[48%] transform -translate-y-1/2 bg-[#007C79] px-4 py-2 rounded-lg hover:bg-[#0A5755] hover:shadow-sm text-[#FAFAFA] transition hover:translate-y-1"
+      class="absolute left-5 top-[13%] md:top-[48%] bg-[#007C79] rounded-lg hover:bg-[#0A5755] text-[#FAFAFA] hover:shadow-sm px-4 py-2 font-semibold transition transform hover:-translate-y-1 uppercase"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
-      </svg>
       Forrige
     </button>
     <button
       id="next"
-      class="flex justify-center items-center gap-2 absolute right-5 top-[35%] md:top-[48%] transform -translate-y-1/2 bg-[#007C79] px-4 py-2 rounded-lg hover:bg-[#0A5755] hover:shadow-sm text-[#FAFAFA] transition hover:translate-y-1"
+      class="absolute right-5 top-[13%] md:top-[48%] bg-[#007C79] rounded-lg hover:bg-[#0A5755] text-[#FAFAFA] hover:shadow-sm px-4 py-2 font-semibold transition transform hover:-translate-y-1 uppercase"
     >
       Næste
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-      </svg>
     </button>
   </div>
 </section>
