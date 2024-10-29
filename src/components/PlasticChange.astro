@@ -3,56 +3,68 @@
 ---
 
 <div class="image-comparison w-screen md:h-screen overflow-hidden" id="image-comparison">
-    <div class="images-container relative flex">
-        <img class="before-image absolute top-0 h-full object-cover object-left" src="/before.png" alt="" id="before-image" />
-        <img class="after-image h-full object-cover object-left" src="/after.png" alt="" />
+  <div class="images-container relative flex">
+    <img class="before-image absolute top-0 h-full object-cover object-left" src="/before.png" alt="" id="before-image" />
+    <img class="after-image h-full object-cover object-left" src="/after.png" alt="" />
 
-        <div class="slider-line absolute h-full w-2 bg-white left-1/2 transform -translate-x-1/2" id="slider-line"></div>
+    <div class="slider-line absolute h-full w-2 bg-white left-1/2 transform -translate-x-1/2" id="slider-line"></div>
 
-        <input type="range" class="slider absolute inset-0 opacity-0 cursor-pointer" min="0" max="100" id="slider" />
-    </div>
+    <input type="range" class="slider absolute inset-0 opacity-0 cursor-pointer" min="0" max="100" id="slider" />
+  </div>
 </div>
 
 <section class="py-20 max-w-6xl mx-auto p-6">
-    <div class="md:grid grid-cols-2 gap-20 pb-20">
-        <div>
-            <h2 class="pb-6 text-[#007C79]">Hvordan reducerer Plastic Change plastikforbrug?</h2>
-            <p class="pb-6">Vi er nødt til at fokusere på at knække kurven for det stigende plastikforbrug og -forurening ved at reducere mængden af plastik i omløb og fremme genbrugsløsninger i stedet for en ”brug-og-smid-væk”-kultur.</p>
-        </div>
-        <div>
-            <p class="pb-6">Hos Plastic Change arbejder vi for at standse udpining af de ressourcer, som Jorden naturligt har til rådighed. Vi skal derfor gentænke nuværende produktionssystemer med fokus på mere genbrug, så vi kan knække den stigende plastikproduktion, der forventes fordoblet om mindre end tyve år.</p>
-            <p class="pb-6">Målet om at udfase engangsplastik og skabe bedre genbrugsløsninger er en del af alt, hvad vi laver. Både i vores politiske arbejde, i samarbejde med vores innovationspartnere og med civilbefolkningen. Og alt andet vi laver, som indebærer undervisning, foredrag, events, forskning, og internationalt arbejde.</p>
-            <a href="https://plasticchange.dk/">Læs mere om Plastic Change indsats</a>
-        </div>
+  <div class="md:grid grid-cols-2 gap-20 pb-20">
+    <div>
+      <h2 class="pb-6 text-[#007C79]">Hvordan reducerer Plastic Change plastikforbrug?</h2>
+      <p class="pb-6">
+        Vi er nødt til at fokusere på at knække kurven for det stigende plastikforbrug og -forurening ved at reducere mængden af plastik i omløb og
+        fremme genbrugsløsninger i stedet for en ”brug-og-smid-væk”-kultur.
+      </p>
     </div>
-    <div class="md:grid grid-cols-2 gap-20">
-        <div>
-            <img class="pb-6" src="engagement.webp" alt="" />
-        </div>
-        <div class="md:flex flex-col items-center justify-center">
-            <h2 class="pb-6 text-[#007C79]">Deres inspiration og engagement</h2>
-            <p>
-                Gennem vores Plastic Changer univers søger vi at inspirere, engagere og motivere civilbefolkningen gennem vores egen adfærd, og ved at fremhæve hvad andre gør. For de mange små skridt, vi i fællesskab kan tage mod en mere bæredygtig fremtid, kan danne grobund og vise retningen for andre, der på samme vis ønsker at følge et grønnere
-                spor.
-            </p>
-        </div>
+    <div>
+      <p class="pb-6">
+        Hos Plastic Change arbejder vi for at standse udpining af de ressourcer, som Jorden naturligt har til rådighed. Vi skal derfor gentænke
+        nuværende produktionssystemer med fokus på mere genbrug, så vi kan knække den stigende plastikproduktion, der forventes fordoblet om mindre
+        end tyve år.
+      </p>
+      <p class="pb-6">
+        Målet om at udfase engangsplastik og skabe bedre genbrugsløsninger er en del af alt, hvad vi laver. Både i vores politiske arbejde, i
+        samarbejde med vores innovationspartnere og med civilbefolkningen. Og alt andet vi laver, som indebærer undervisning, foredrag, events,
+        forskning, og internationalt arbejde.
+      </p>
+      <a href="https://plasticchange.dk/">Læs mere om Plastic Change's indsats</a>
     </div>
+  </div>
+  <div class="md:grid grid-cols-2 gap-20">
+    <div>
+      <img class="pb-6" src="engagement.webp" alt="" />
+    </div>
+    <div class="md:flex flex-col items-center justify-center">
+      <h2 class="pb-6 text-[#007C79]">Deres inspiration og engagement</h2>
+      <p>
+        Gennem vores Plastic Changer univers søger vi at inspirere, engagere og motivere civilbefolkningen gennem vores egen adfærd, og ved at
+        fremhæve hvad andre gør. For de mange små skridt, vi i fællesskab kan tage mod en mere bæredygtig fremtid, kan danne grobund og vise retningen
+        for andre, der på samme vis ønsker at følge et grønnere spor.
+      </p>
+    </div>
+  </div>
 </section>
 
 <script>
-    const imageComparison = document.getElementById("image-comparison");
-    const beforeImage = document.getElementById("before-image");
-    const sliderLine = document.getElementById("slider-line");
-    const slider = document.getElementById("slider");
+  const imageComparison = document.getElementById("image-comparison");
+  const beforeImage = document.getElementById("before-image");
+  const sliderLine = document.getElementById("slider-line");
+  const slider = document.getElementById("slider");
 
-    imageComparison.addEventListener("mousemove", (event) => {
-        const rect = imageComparison.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const width = rect.width;
-        const percentage = (x / width) * 100;
+  imageComparison.addEventListener("mousemove", (event) => {
+    const rect = imageComparison.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const width = rect.width;
+    const percentage = (x / width) * 100;
 
-        sliderLine.style.left = `${percentage}%`;
-        slider.value = percentage;
-        beforeImage.style.width = `${percentage}%`;
-    });
+    sliderLine.style.left = `${percentage}%`;
+    slider.value = percentage;
+    beforeImage.style.width = `${percentage}%`;
+  });
 </script>
