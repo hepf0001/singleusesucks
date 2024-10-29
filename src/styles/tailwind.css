@@ -9,6 +9,12 @@
     @apply cursor-handcursor;
   }
 
+  .no-cursor-change a,
+.no-cursor-change img,
+.no-cursor-change video {
+  @apply cursor-auto;
+}
+
   h1 {
     @apply text-8xl;
     @apply uppercase;

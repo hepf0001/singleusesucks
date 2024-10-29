@@ -5,7 +5,11 @@ import Button from "../components/Button.astro";
 <section class="bg-[#007C79]">
   <!--------------------------- Mobil --------------------------->
   <section class="max-w-6xl mx-auto p-6 md:hidden block">
-    <img class="pb-6" src="/logo.svg" alt="Plastic Change logo" />
+    <div class="pb-6">
+      <div class="bg-[#FF1054] w-40 p-4">
+        <a href="/#"><p class="text-[8px]sm:text-[12px] lg:text-[14px] text-center whitespace-nowrap text-[#FAFAFA] font-bold">Plastic Change</p></a>
+      </div>
+    </div>
     <div class="flex pb-12">
       <a class="pr-2" href="https://www.facebook.com/plasticchange/"><img src="/f.svg" alt="" /></a>
       <a class="px-2" href="https://x.com/plasticchange"><img src="/x.svg" alt="" /></a>
@@ -37,7 +41,11 @@ import Button from "../components/Button.astro";
   <section class="max-w-6xl mx-auto p-6 hidden md:block">
     <div class="flex justify-between">
       <div class="">
-        <img class="pb-6" src="/logo.svg" alt="Plastic Change logo" />
+        <div class="pb-6">
+          <div class="bg-[#FF1054] w-40 p-4">
+            <a href="/#"><p class="text-[8px]sm:text-[12px] lg:text-[14px] text-center whitespace-nowrap text-[#FAFAFA] font-bold">Plastic Change</p></a>
+          </div>
+        </div>
         <div>
           <p class="text-[#FAFAFA]">Mail. info@plasticchange.org</p>
           <p class="pb-6 text-[#FAFAFA]">Tlf. +45 42 66 72 46</p>
@@ -57,7 +65,7 @@ import Button from "../components/Button.astro";
           <Button class="my-2" variant="primary" size="small">Send</Button>
         </form>
       </div>
-      <div class="flex">
+      <div class="flex no-cursor-change">
         <a class="pr-2" href="https://www.facebook.com/plasticchange/"><img src="/f.svg" alt="" /></a>
         <a class="px-2" href="https://x.com/plasticchange"><img src="/x.svg" alt="" /></a>
         <a class="px-2" href="https://www.linkedin.com/company/plastic-change"><img src="/in.svg" alt="" /></a>
