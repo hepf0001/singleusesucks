@@ -3,20 +3,17 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 z-50 w-full bg-gray-100 relative">
-  <div class="hidden md:absolute md:inset-0 md:items-center md:flex">
-    <div class="border-2 border-solid bg-[#FF1054] items-center flex">
-      <div class="w-36">
-        <a href="/#"><img src="/logo.svg" alt="Plastic Change logo" /></a>
-      </div>
-    </div>
-  </div>
+<div x-data="{ showmenu: false }" class="z-10 w-full bg-gray-100 relative">
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
-  <div id="navbar" class="flex flex-row mx-auto items-center max-w-full px-0 md:px-4">
+
+  <div id="navbar" class="flex flex-row mx-auto items-center max-w-full">
+    <div class="bg-[#FF1054] w-40 p-4">
+      <a href="#"><p class="text-[8px]sm:text-[12px] lg:text-[14px] text-center whitespace-nowrap text-[#FAFAFA] font-bold">Plastic Change</p></a>
+    </div>
     <div class="flex justify-between items-center mx-auto w-full">
       <nav id="desktopmenu" class="hidden font-lato lg:flex justify-between items-center mx-auto">
         <div class="flex flex-row gap-6">
-          <Link href="#plastikforurening" variant="textlink" size="standard">Om Plastikforurening</Link>
+          <Link href="./#plastikforurening" variant="textlink" size="standard">Om Plastikforurening</Link>
           <Link href="./#problemet" variant="textlink" size="standard">Plastikproblemet</Link>
           <Link href="./#hvadkandu" variant="textlink" size="standard">Hvad Kan Du Gøre?</Link>
           <Link href="./#voresindsats" variant="textlink" size="standard">Vores Indsats</Link>
@@ -24,75 +21,54 @@ import Button from "../components/Button.astro";
         </div>
       </nav>
     </div>
-    <div class="hidden lg:flex"><a href="/formular"><Button variant="primary" size="small">Støt</Button></a></div>
-  </div>
-
-  <div class="flex flex-col items-center">
-    <div class="w-36 absolute inset-0 md:hidden">
-      <a href="/#"><img src="/logo.svg" alt="Plastic Change logo" /></a>
+    <div class="hidden pr-4 lg:block"><a href="/formular"><Button variant="primary" size="small">Støt</Button></a></div>
+    <div>
+      <button id="burgermenu" class="lg:hidden pr-4" x-on:click="showmenu = ! showmenu"
+        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" x-show="!showmenu" x-transition>
+          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" x-show="showmenu" x-transition>
+          <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
     </div>
-    <div class="flex flex-row w-full justify-end">
-      <div class="flex">
-        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" x-show="!showmenu" x-transition>
-            <path
-              fill-rule="evenodd"
-              d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
-              clip-rule="evenodd"></path>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" x-show="showmenu" x-transition>
-            <path
-              fill-rule="evenodd"
-              d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <nav
-      id="mobilmenu"
-      class="flex flex-col content-center p-4 z-50"
-      x-show="showmenu"
-      x-transition
-      x-on:click="showmenu = false"
-      x-on:click.outside="showmenu = false"
-    >
-      <ul class="flex flex-col items-center mx-auto justify-between py-10 gap-10">
-        <Link href="./#plastikforurening" variant="textlink" size="standard">Om Plastikforurening</Link>
-        <Link href="./#problemet" variant="textlink" size="standard">Plastikproblemet</Link>
-        <Link href="./#hvadkandu" variant="textlink" size="standard">Hvad Kan Du Gøre?</Link>
-        <Link href="./#voresindsats" variant="textlink" size="standard">Vores Indsats</Link>
-        <Link href="./#shop" variant="textlink" size="standard">Shop</Link>
-        <div class="block"><Button>Støt</Button></div>
-      </ul>
-    </nav>
   </div>
 
-  <!-- Progress-bar placeret i toppen af sitet -->
-  <div class="progress-container fixed w-full overflow-x-hidden top-0 left-0 z-50">
-    <div class="progress-bar h-4 bg-[#FF1054] origin-top-left"></div>
-  </div>
-
-  <script>
-    import { inView, animate, scroll } from "motion";
-    /*Progress-baren/læseindikatoren */
-    scroll(animate(".progress-bar", { scaleX: [0, 1] }));
-  </script>
-
-  <style>
-    .progress-container {
-      width: 100vw;
-      overflow-x: hidden;
-    }
-
-    .progress-bar {
-      width: 100%;
-      max-width: 100vw;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      transform-origin: left;
-    }
-  </style>
+  <nav id="mobilmenu" class="flex flex-col content-center p-4 z-50" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul class="flex flex-col items-center mx-auto justify-between py-10 gap-10">
+      <Link href="./#plastikforurening" variant="textlink" size="standard">Om Plastikforurening</Link>
+      <Link href="./#problemet" variant="textlink" size="standard">Plastikproblemet</Link>
+      <Link href="./#hvadkandu" variant="textlink" size="standard">Hvad Kan Du Gøre?</Link>
+      <Link href="./#voresindsats" variant="textlink" size="standard">Vores Indsats</Link>
+      <Link href="./#shop" variant="textlink" size="standard">Shop</Link>
+      <div class="block"><Button>Støt</Button></div>
+    </ul>
+  </nav>
 </div>
+
+<!-- Progress-bar placeret i toppen af sitet -->
+<div class="progress-container fixed w-full overflow-x-hidden top-0 left-0 z-50">
+  <div class="progress-bar h-4 bg-[#FF1054] origin-top-left"></div>
+</div>
+
+<script>
+  import { inView, animate, scroll } from "motion";
+  /*Progress-baren/læseindikatoren */
+  scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+</script>
+
+<style>
+  .progress-container {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .progress-bar {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transform-origin: left;
+  }
+</style>
