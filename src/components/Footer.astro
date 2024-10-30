@@ -20,9 +20,22 @@ import Button from "../components/Button.astro";
     <div class="pb-12">
       <h2 class="pb-6 text-[#FAFAFA]">Nyhedsbrev</h2>
       <p class="pb-6 text-[#FAFAFA] max-w-sm">Bliv en del af kampen mod plastikforurening. Tilmeld dig vores nyhedsbrev og få opdateringer om vores initiativer og hvordan du kan bidrage.</p>
-      <form>
+      <!-- <form>
         <input type="email" class="rounded-full my-2 px-6 p-2 bg-[#007C79] border-2 border-[#0A5755] placeholder-[#FAFAFA]" placeholder="E-mail adresse" />
         <Button class="my-2" variant="primary" size="small">Send</Button>
+      </form> -->
+      <form action="#">
+        <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+          <div class="relative w-full">
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <svg class="w-5 h-5 text-[#FAFAFA]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+            </div>
+            <input class="block p-3 pl-10 pr-3 w-full text-sm text-[#FAFAFA] bg-transparent rounded-full border-2 border-[#0A5755] focus:ring-primary-500 focus:border-primary-500 placeholder-[#FAFAFA]" placeholder="Email adresse" type="email" id="email" required="" />
+            <div class="absolute inset-0 flex items-center justify-end">
+              <button type="submit" class="py-3 px-5 text-sm font-medium text-center bg-[#FF1054] hover:bg-[#B4003C] text-[#FAFAFA] rounded-full cursor-pointer border-2 border-[#FF1054] hover:border-[#B4003C] -ml-px">SEND</button>
+            </div>
+          </div>
+        </div>
       </form>
     </div>
     <div>
@@ -60,9 +73,22 @@ import Button from "../components/Button.astro";
       <div class="">
         <h2 class="pb-6 text-[#FAFAFA]">Nyhedsbrev</h2>
         <p class="pb-6 text-[#FAFAFA] max-w-sm">Bliv en del af kampen mod plastikforurening. Tilmeld dig vores nyhedsbrev og få opdateringer om vores initiativer og hvordan du kan bidrage.</p>
-        <form>
+        <!-- <form>
           <input type="email" class="rounded-full my-2 px-6 p-2 bg-[#007C79] border-2 border-[#0A5755] placeholder-[#FAFAFA]" placeholder="E-mail adresse" />
           <Button class="my-2" variant="primary" size="small">Send</Button>
+        </form> -->
+        <form action="#">
+          <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+            <div class="relative w-full">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg class="w-5 h-5 text-[#FAFAFA]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+              </div>
+              <input class="block p-3 pl-10 pr-3 w-full text-sm text-[#FAFAFA] bg-transparent rounded-full border-2 border-[#0A5755] focus:ring-primary-500 focus:border-primary-500 placeholder-[#FAFAFA]" placeholder="Email adresse" type="email" id="email" required="" />
+              <div class="absolute inset-0 flex items-center justify-end">
+                <button type="submit" class="py-3 px-5 text-sm font-medium text-center bg-[#FF1054] hover:bg-[#B4003C] text-[#FAFAFA] rounded-full cursor-pointer border-2 border-[#FF1054] hover:border-[#B4003C] -ml-px">SEND</button>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
       <div class="flex no-cursor-change">
