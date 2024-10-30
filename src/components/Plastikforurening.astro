@@ -4,7 +4,7 @@
 
 <section class="[#FAFAFA]">
   <section class="py-20">
-    <section class="md:grid grid-cols-2 gap-20 max-w-6xl mx-auto p-6">
+    <section class="md:grid grid-cols-2 gap-20 max-w-6xl mx-auto p-6" id="fadeInLeft">
       <div class="md:flex flex-col items-center justify-center pb-10">
         <h2 class="text-[#007C79] pb-6">Vi kæmper for et affaldsfrit samfund, hvor plastik bruges igen og igen</h2>
         <p class="">
@@ -40,3 +40,13 @@
     </section>
   </div>
 </section>
+
+<script>
+  import { inView } from "motion";
+
+  /* inView Animations */
+  const elementmedanimation1 = document.querySelector("#fadeInLeft");
+  inView(elementmedanimation1, () => {
+    elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+</script>
