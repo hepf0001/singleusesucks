@@ -3,12 +3,12 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="z-[99] w-full fixed bg-gray-100">
+<div x-data="{ showmenu: false }" class="z-[99] w-full fixed overflow-hidden bg-gray-100">
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
 
   <div id="navbar" class="flex flex-row mx-auto items-center max-w-full">
-    <div class="bg-[#FF1054] w-40 p-4">
-      <a href="/#"><p class="text-[8px]sm:text-[12px] lg:text-[14px] text-center whitespace-nowrap text-[#FAFAFA] font-bold">Plastic Change</p></a>
+    <div class="bg-[#FF1054] w-40 p-[18px]">
+      <a href="/#"><p class="text-[8px] sm:text-[12px] lg:text-[14px] text-center whitespace-nowrap text-[#FAFAFA] font-bold">Plastic Change</p></a>
     </div>
     <div class="flex justify-between items-center mx-auto w-full">
       <nav id="desktopmenu" class="hidden font-lato lg:flex justify-start items-center pl-6">
@@ -41,13 +41,13 @@ import Button from "../components/Button.astro";
       <Link href="./#hvadkandu" variant="textlink" size="standard">Hvad Kan Du Gøre?</Link>
       <Link href="./#voresindsats" variant="textlink" size="standard">Vores Indsats</Link>
       <Link href="./#shop" variant="textlink" size="standard">Shop</Link>
-      <div class="block"><Button>Støt</Button></div>
+      <div class="block"><a href="/formular"><Button>Støt</Button></a></div>
     </ul>
   </nav>
 </div>
 
 <!-- Progress-bar placeret i toppen af sitet -->
-<div class="progress-container fixed w-full overflow-x-hidden top-0 left-0 z-50">
+<div class="progress-container fixed w-full overflow-x-hidden top-[45px] md:top-[54px] left-0 z-50">
   <div class="progress-bar h-4 bg-[#FF1054] origin-top-left"></div>
 </div>
 
