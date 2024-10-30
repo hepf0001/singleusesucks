@@ -4,14 +4,24 @@
 
 <section class="relative">
     <img class="h-screen w-full object-cover" src="/hero.webp" alt="havets bund, med en haj svømmende" />
-    <div class="max-w-6xl mx-auto p-6 cusor absolute inset-0 flex md:items-center items-start">
+    <!-- <div class="max-w-6xl mx-auto p-6 cusor absolute inset-0 flex md:items-center items-start">
         <section class="z-50 md:pt-0 pt-16" x-data>
             <h1 class="text-[#FAFAFA]">Single Use</h1>
             <h1 class="text-[#FAFAFA] pb-6">Sucks</h1>
             <h3 class="text-[#FAFAFA]">Vores verden kan ikke holde til mere</h3>
             <h3 class="text-[#FAFAFA]">unødvendig plastik</h3>
         </section>
+    </div> -->
+
+    <div class="max-w-6xl mx-auto p-6 cusor absolute inset-0 flex md:items-center items-start">
+        <section class="z-50 md:pt-0 pt-16" x-data>
+            <h1 class="text-[#FAFAFA] mark relative inline-block text-center">Single Use</h1>
+            <h1 class="text-[#FAFAFA] pb-6 mark relative inline-block text-center">Sucks</h1>
+            <h3 class="text-[#FAFAFA]">Vores verden kan ikke holde til mere</h3>
+            <h3 class="text-[#FAFAFA]">unødvendig plastik</h3>
+        </section>
     </div>
+
     <div class="opacity-95 absolute md:bottom-[30%] bottom-[25%] md:right-[5%] md:w-[600px] z-40 animate-[float_5s_linear_infinite]">
         <img src="/skildpade-ps.png" alt="trash" class="hover:scale-110 duration-700" />
     </div>
@@ -43,3 +53,45 @@
         </div>
     </div>
 </section>
+
+<style>
+    /* Your existing styles here */
+
+    .mark {
+        padding: 30px 100px;
+        animation: highlight-effect 2s 1.5s forwards;
+        background-color: transparent;
+    }
+    .mark::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px 0;
+        width: 100%;
+        height: 90px;
+        background-color: #ff1054a2;
+        display: block;
+        animation: visible-effect 1s 0.1s forwards;
+    }
+
+    @keyframes visible-effect {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    @keyframes highlight-effect {
+        0% {
+            clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+        }
+        100% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+</style>
