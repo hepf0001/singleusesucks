@@ -8,9 +8,23 @@ import PlasticChange from "../components/PlasticChange.astro";
 import Plastikforurening from "../components/Plastikforurening.astro";
 import Problemet from "../components/Problemet.astro";
 import StoetMerchandise from "../components/StoetMerchandise.astro";
+const schemamarkup = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  name: "Plastic Change",
+  alternateName: "#SingleUseSucks",
+  url: "https://singleusesucks-plasticchange.netlify.app/",
+  logo: "",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "",
+    contactType: "",
+  },
+  sameAs: ["https://www.facebook.com/plasticchange/", "https://www.instagram.com/plasticchange", "https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g", "https://www.linkedin.com/company/plastic-change"],
+};
 ---
 
-<MainLayout title="#SingleUseSucks - forside">
+<MainLayout title="#SingleUseSucks - forside" description="Vi kæmper for et affaldsfrit samfund, hvor plastik bruges igen og igen" ogtitle="Plastic Change-Single use sucks" ogdescription="Plastikforurening i verdenshavene er et alvorligt problem, med omkring 8 millioner tons plastik, der hvert år havner i havene">
   <div class="hero">
     <Hero />
   </div>
@@ -35,3 +49,5 @@ import StoetMerchandise from "../components/StoetMerchandise.astro";
     <StoetMerchandise />
   </div>
 </MainLayout>
+
+<script type="application/ld+json" set:html="{JSON.stringify(schemamarkup)}" />
