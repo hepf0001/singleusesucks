@@ -10,11 +10,11 @@ import mobilepay from "../assets/images/mobilepay.svg";
 import { Image } from "astro:assets";
 ---
 
-<MainLayout title="Støt formular">
+<MainLayout title="Støt os">
   <section class="w-full object-cover bg-cover" style={`background-image: url(${bottle.src});`}>
-    <div class="w-full bg-black/40">
-      <div class="p-6 md:max-w-7xl grid grid-cols-1 gap-4 mx-auto md:gap-16 lg:py-40 lg:grid-cols-2">
-        <div class="flex flex-col justify-center items-center">
+    <div class="w-full px-6 bg-black/40">
+      <div class="pb-6 md:max-w-7xl grid grid-cols-1 gap-4 mx-auto md:gap-16 lg:py-40 lg:grid-cols-2">
+        <div class="pt-20 pb-2 flex flex-col justify-center">
           <h1 class="text-[#FAFAFA] text-shadow">STØT OS <br /> Beskyt vores verden</h1>
           <h2 class="text-[#FAFAFA] text-shadow">Mod plastikforurening handl nu!</h2>
         </div>
@@ -37,13 +37,28 @@ import { Image } from "astro:assets";
                 </div>
 
                 <div class="flex flex-col flex-wrap gap-4 md:justify-between md:flex-row">
-                  <button class="border-2 border-[#CACDD5] shadow-md hover:bg-[#FF1054] hover:text-[#FAFAFA] py-3 px-10 rounded-md font-bold font-kanit text-lg transition transform hover:-translate-y-1">100 kr.</button>
-                  <button class="border-2 border-[#CACDD5] shadow-md hover:bg-[#FF1054] hover:text-[#FAFAFA] py-3 px-10 rounded-md font-bold font-kanit text-lg transition transform hover:-translate-y-1">200 kr.</button>
-                  <button class="border-2 border-[#CACDD5] shadow-md hover:bg-[#FF1054] hover:text-[#FAFAFA] py-3 px-10 rounded-md font-bold font-kanit text-lg transition transform hover:-translate-y-1">300 kr.</button>
+                  <button
+                    class="border-2 border-[#CACDD5] shadow-md hover:bg-[#FF1054] hover:text-[#FAFAFA] py-3 px-10 rounded-md font-bold font-kanit text-lg transition transform hover:-translate-y-1"
+                    >100 kr.</button
+                  >
+                  <button
+                    class="border-2 border-[#CACDD5] shadow-md hover:bg-[#FF1054] hover:text-[#FAFAFA] py-3 px-10 rounded-md font-bold font-kanit text-lg transition transform hover:-translate-y-1"
+                    >200 kr.</button
+                  >
+                  <button
+                    class="border-2 border-[#CACDD5] shadow-md hover:bg-[#FF1054] hover:text-[#FAFAFA] py-3 px-10 rounded-md font-bold font-kanit text-lg transition transform hover:-translate-y-1"
+                    >300 kr.</button
+                  >
                 </div>
                 <div class="w-full flex flex-col flex-wrap font-bold font-kanit text-xl text-[#1C1E23]">
                   <label for="Valgfritbeløb"></label>
-                  <input type="text" id="Valgfritbeløb" name="Valgfritbeløb" placeholder="Valgfrit beløb" class="border-2 border-[#CACDD5] shadow-md rounded-md p-3 text-center text-lg text-[#CACDD5] w-full" />
+                  <input
+                    type="text"
+                    id="Valgfritbeløb"
+                    name="Valgfritbeløb"
+                    placeholder="Valgfrit beløb"
+                    class="border-2 border-[#CACDD5] shadow-md rounded-md p-3 text-center text-lg text-[#CACDD5] w-full"
+                  />
                 </div>
 
                 <div class="flex justify-center pt-2 pb-4">
@@ -54,7 +69,7 @@ import { Image } from "astro:assets";
           </div>
 
           <div class="w-full h-auto items-center justify-center bg-[#CACDD5] rounded-b-xl flex flex-wrap md:grid md:grid-cols-2 md:pt-4">
-            <div class="flex flex-wrap items-center py-4 justify-center mx-auto md:border-r-2 md:border-r-[#A3A6B4]">
+            <div class="flex flex-wrap items-center py-8 justify-center mx-auto md:border-r-2 md:border-r-[#A3A6B4]">
               <Image src={visa} alt="visacard" class="w-[75px]" />
               <Image src={master} alt="visacard" class="w-[75px]" />
               <Image src={dankort} alt="visacard" class="w-[75px]" />
@@ -62,7 +77,7 @@ import { Image } from "astro:assets";
                 <h3 class="font-bold font-kanit text-lg">Betailingskort</h3>
               </div>
             </div>
-            <div class="flex flex-wrap items-center justify-center pb-4">
+            <div class="flex flex-wrap items-center py-8 justify-center">
               <Image src={mobilepay} alt="visacard" class="w-20" />
               <div class="w-full flex justify-center items-center mt-2">
                 <h3 class="font-bold font-kanit text-lg">Mobilepay</h3>

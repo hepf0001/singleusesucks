@@ -1,19 +1,19 @@
 ---
-import ButtonSlider from "./ButtonSlider.astro";
+
 ---
 
 <div id="slider-header">
   <h2 class="text-center text-[#007C79] max-w-5xl md:max-w-6xl mx-auto md:pt-20 pt-12">De tre hovedpunkter i problemet</h2>
 </div>
-<section class="relative flex items-center justify-center md:h-screen h-[100vh]">
-  <div id="slider-section" class="relative w-3/4 lg:w-1/2 lg:h-[80%] h-[90%] mx-auto overflow-hidden">
+<section class="relative flex items-center justify-center md:h-[110vh] h-[100vh]">
+  <div id="slider-section" class="relative w-3/4 lg:w-[42%] lg:h-[80%] h-[90%] mx-auto overflow-hidden">
     <div class="overflow-hidden md:shadow-md shadow-lg md:rounded-lg rounded-2xl bg-[#FAFAFA]">
       <div id="slider" class="flex transition-transform duration-500 ease-in-out">
         <!-- Slide 1 -->
         <div class="min-w-full">
           <img src="/turtle2.webp" alt="Slide 1" class="w-full md:h-96 h-40 object-cover" />
-          <div class="p-4 text-[#1C1E23]">
-            <h3 class="text-2xl font-bold">Havdyr er særligt udsatte</h3>
+          <div class="p-6 text-[#1C1E23]">
+            <h3 class="font-bold pb-4">Havdyr er særligt udsatte</h3>
             <p class="">
               Plastikforurening i verdenshavene er et alvorligt problem, med omkring 8 millioner tons plastik, der hvert år havner i havene – svarende
               til én lastbilfuld plastik hvert minut. Dette tal stammer fra 2015, og mængden er formentlig steget siden da. Havdyr som for eksempel
@@ -34,8 +34,8 @@ import ButtonSlider from "./ButtonSlider.astro";
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-          <div class="p-4 text-[#1C1E23]">
-            <h3 class="text-2xl font-bold">Plastik er fyldt med kemikalier</h3>
+          <div class="p-6 text-[#1C1E23]">
+            <h3 class="font-bold pb-4">Plastik er fyldt med kemikalier</h3>
             <p class="">
               Al plastik indeholder kemikalier kaldet additiver, der gør materialet funktionelt. Disse kemikalier kan enten være blødgørere,
               UV-beskyttere eller flammehæmmere. Globalt produceres der over 400 millioner tons plastik årligt, og over 16.000 kemikalier er knyttet
@@ -55,8 +55,8 @@ import ButtonSlider from "./ButtonSlider.astro";
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-          <div class="p-4 text-[#1C1E23]">
-            <h3 class="text-2xl font-bold">Mikroplastik udgør en sundhedsrisiko</h3>
+          <div class="p-6 text-[#1C1E23]">
+            <h3 class="pb-4 font-bold">Mikroplastik udgør en sundhedsrisiko</h3>
             <p class="">
               Ny forskning viser, at mikroplast ikke kun forurener naturen, men også vores kroppe. Jo mindre plastpartiklerne er, jo større en
               sundhedsrisiko udgør de, da de lettere optages i kroppen. Studier har vist, at mikroplast kan forårsage celledød og skader på
@@ -72,13 +72,13 @@ import ButtonSlider from "./ButtonSlider.astro";
     <!-- Navigation Buttons -->
     <button
       id="prev"
-      class="absolute left-5 top-[13%] md:top-[48%] bg-[#007C79] rounded-lg hover:bg-[#0A5755] text-[#FAFAFA] hover:shadow-sm px-4 py-2 font-semibold transition transform hover:-translate-y-1 uppercase"
+      class="absolute left-5 top-[13%] md:top-[43%] bg-[#007C79] rounded-lg hover:bg-[#0A5755] text-[#FAFAFA] hover:shadow-sm px-4 py-2 font-semibold transition transform hover:-translate-y-1 uppercase"
     >
       Forrige
     </button>
     <button
       id="next"
-      class="absolute right-5 top-[13%] md:top-[48%] bg-[#007C79] rounded-lg hover:bg-[#0A5755] text-[#FAFAFA] hover:shadow-sm px-4 py-2 font-semibold transition transform hover:-translate-y-1 uppercase"
+      class="absolute right-5 top-[13%] md:top-[43%] bg-[#007C79] rounded-lg hover:bg-[#0A5755] text-[#FAFAFA] hover:shadow-sm px-4 py-2 font-semibold transition transform hover:-translate-y-1 uppercase"
     >
       Næste
     </button>
