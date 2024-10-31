@@ -14,11 +14,11 @@ import Slider from "./Slider.astro";
       <div class="data-columns flex flex-col max-w-5xl mx-auto py-20 z-10">
         <div id="column1" class="p-4 flex flex-col justify-center items-start py-20 z-50 relative">
           <img src="/column1.svg" alt="column1" class="w-3/4 md:w-2/3" />
-          <h3 class="text-right pt-4 text-[#FAFAFA]">Af plastikken flyder i overfladen</h3>
+          <h2 class="text-left text-2xl md:text-4xl pt-4 text-[#FAFAFA]">Af plastikken flyder i overfladen</h2>
         </div>
       </div>
       <div class="absolute bottom-[10%] md:left-[60%] left-[22%] md:w-80 w-72 animate-[float_5s_linear_infinite] md:z-50">
-        <img src="/pot.webp" alt="trash" class="hover:scale-110 duration-700" />
+        <img src="/pot.webp" alt="pot" class="hover:scale-110 duration-700" />
       </div>
     </div>
   </div>
@@ -31,22 +31,22 @@ import Slider from "./Slider.astro";
     <div class="data-columns flex flex-col max-w-5xl mx-auto py-20 z-10">
       <div id="column2" class="p-4 flex flex-col justify-center items-end py-20 z-50 relative">
         <img src="/column2.svg" alt="column2" class="w-2/3 md:w-3/4" />
-        <h3 class="text-right pt-4 text-[#FAFAFA]">Ligger længere nede i vandsøjlen</h3>
+        <h2 class="text-right pt-4 text-2xl md:text-4xl text-[#FAFAFA]">Ligger længere nede i vandsøjlen</h2>
       </div>
     </div>
 
     <!-- Trash -->
     <div class="opacity-50 absolute bottom-[48%] left-[2%] md:w-96 w-60 animate-[float_5s_linear_infinite] md:z-50">
-      <img src="/bottle2.webp" alt="trash" class="hover:scale-110 duration-700" />
+      <img src="/bottle2.webp" alt="bottle" class="hover:scale-110 duration-700" />
     </div>
-    <div class="opacity-50 absolute bottom-[15%] right-[50%] md:w-72 w-60 animate-[float_6s_linear_infinite] z-30">
-      <img src="/fork.webp" alt="trash" class="hover:scale-110 duration-700" />
+    <div class="opacity-50 absolute bottom-[30%] md:right-[70%] right-[40%] md:w-96 w-60 animate-[float_6s_linear_infinite] z-30">
+      <img src="/fork.webp" alt="fork" class="hover:scale-110 duration-700" />
     </div>
     <div class="opacity-50 absolute bottom-[2%] right-[2%] md:w-96 w-60 animate-[float_5s_linear_infinite] z-50">
-      <img src="/glove.webp" alt="trash" class="hover:scale-110 duration-700" />
+      <img src="/glove.webp" alt="glove" class="hover:scale-110 duration-700" />
     </div>
-    <div class="opacity-50 absolute bottom-[60%] left-[30%] md:w-80 w-60 animate-[float_6s_linear_infinite] z-30">
-      <img src="/cup.webp" alt="trash" class="hover:scale-110 duration-700" />
+    <div class="opacity-50 absolute bottom-[0%] left-[20%] w-[60rem] animate-[float_6s_linear_infinite] z-30 hidden md:block">
+      <img src="/cup.webp" alt="cup" class="hover:scale-110 duration-700" />
     </div>
   </div>
 </section>
@@ -57,7 +57,7 @@ import Slider from "./Slider.astro";
 <style>
   /* Misc. styles */
   h1,
-  h3 {
+  h2 {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 

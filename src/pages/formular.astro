@@ -14,7 +14,7 @@ import { Image } from "astro:assets";
   <section class="w-full object-cover bg-cover" style={`background-image: url(${bottle.src});`}>
     <div class="w-full px-6 bg-black/40">
       <div class="pb-6 md:max-w-7xl grid grid-cols-1 gap-4 mx-auto md:gap-16 lg:py-40 lg:grid-cols-2">
-        <div class="pt-20 pb-2 flex flex-col justify-center">
+        <div class="pt-20 md:pt-0 pb-2 flex flex-col justify-center">
           <h1 class="text-[#FAFAFA] text-shadow">STØT OS <br /> Beskyt vores verden</h1>
           <h2 class="text-[#FAFAFA] text-shadow">Mod plastikforurening handl nu!</h2>
         </div>
@@ -39,15 +39,15 @@ import { Image } from "astro:assets";
                 <div class="flex flex-col flex-wrap gap-4 md:justify-between md:flex-row">
                   <button
                     class="border-2 border-[#CACDD5] shadow-md hover:bg-[#FF1054] hover:text-[#FAFAFA] py-3 px-10 rounded-md font-bold font-kanit text-lg transition transform hover:-translate-y-1"
-                    >100 kr.</button
+                    >100 DKK</button
                   >
                   <button
                     class="border-2 border-[#CACDD5] shadow-md hover:bg-[#FF1054] hover:text-[#FAFAFA] py-3 px-10 rounded-md font-bold font-kanit text-lg transition transform hover:-translate-y-1"
-                    >200 kr.</button
+                    >200 DKK</button
                   >
                   <button
                     class="border-2 border-[#CACDD5] shadow-md hover:bg-[#FF1054] hover:text-[#FAFAFA] py-3 px-10 rounded-md font-bold font-kanit text-lg transition transform hover:-translate-y-1"
-                    >300 kr.</button
+                    >300 DKK</button
                   >
                 </div>
                 <div class="w-full flex flex-col flex-wrap font-bold font-kanit text-xl text-[#1C1E23]">
@@ -56,7 +56,7 @@ import { Image } from "astro:assets";
                     type="text"
                     id="Valgfritbeløb"
                     name="Valgfritbeløb"
-                    placeholder="Valgfrit beløb"
+                    placeholder="Angiv et ønsket beløb i DKK"
                     class="border-2 border-[#CACDD5] shadow-md rounded-md p-3 text-center text-lg text-[#CACDD5] w-full"
                   />
                 </div>
